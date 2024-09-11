@@ -21,12 +21,12 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useCreateIndex', true);
 
-let mongoUrl = `mongodb://${MONGO_IP}:${MONGO_PORT}/${MONGO_DB}`; // local mongo
+let mongoUrl =`mongodb+srv://yaswanth0412:JQSfDezAMeAHcvb7@cluster0.n375v.mongodb.net/eCommerce?retryWrites=true&w=majority`; // local mongo
 
-if(NODE_ENV !== 'development' || (MONGO_USER !== '' && MONGO_PASS !== '')) {
-    mongoUrl = HAS_SRV == '' ? `mongodb://${MONGO_USER}:${MONGO_PASS}@${MONGO_IP}:${MONGO_PORT}/${MONGO_DB}` 
-                : `mongodb+srv://${MONGO_USER}:${MONGO_PASS}@${MONGO_IP}/${MONGO_DB}?retryWrites=true&w=majority`
-}
+// if(NODE_ENV !== 'development' || (MONGO_USER !== '' && MONGO_PASS !== '')) {
+//     mongoUrl = HAS_SRV == '' ? `mongodb://${MONGO_USER}:${MONGO_PASS}@${MONGO_IP}:${MONGO_PORT}/${MONGO_DB}` 
+//                 : `mongodb+srv://${MONGO_USER}:${MONGO_PASS}@${MONGO_IP}/${MONGO_DB}?retryWrites=true&w=majority`
+// }
 
 mongoose.connect(mongoUrl)
 .then(() => {
