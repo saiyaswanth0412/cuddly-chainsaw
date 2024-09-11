@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiEndPoint: 'http://localhost:3000/api/'
+  apiEndPoint: 'https://backend-37twzq17e-yaswanth0412s-projects.vercel.app/api/'
 };
 
 /*
